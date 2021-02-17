@@ -11,6 +11,7 @@ const init = () =>{
 
 export const TodoApp = () => {
 
+  //useReducer
   //con [] se indica que si no hay initialstate este sera un arreglo vacio
   const [todos, dispatch] = useReducer(todoReducer, [],init);
 
@@ -133,6 +134,7 @@ export const TodoApp = () => {
                 className="list-group-item"
               >
                 <p 
+                //Si (todo.done) es true con el operador '&&' se agrega la clase complete
                   className={`${todo.done && 'complete'}`}
                   onClick={()=>handleToggle(todo.id)}
                 >
